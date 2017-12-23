@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Instagram</title>
+	<link href="https://fonts.googleapis.com/css?family=Roboto:100,400,500" rel="stylesheet">
+	<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="normalize.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<article>
+	<div class="main">
+		<div class="profile_pic_box">
+			<div>
+				<img id="profile_pic">
+			</div>
+		</div>
+		<div class="info">
+			<div class="info1">
+				<h1 id="username">bla.bla</h1>
+				<div><a href="#">Edit Profile</a></div>
+			</div>
+			<div class="info2">
+				<a href="#"><span id="posts">666</span> posts</a>
+				<a href="#"><span id="followers">666</span> followers</a>
+				<a href="#"><span id="following">666</span> following</a>
+			</div>
+			<div class="info3">
+				<h1 id="name">Bla Blaic</h1>
+			</div>
+		</div>
+	</div>
+	<div class="article-nav">
+		<div class="active"><a href="#">Posts</a></div>
+		<div><a href="#">Saved</a></div>
+	</div>
+	<div id="images">
+
+	</div>
+
+
+	<div id="modal">
+		<span id="close">&times;</span>	
+		<div id="modal-content">
+			<div id="img_window"></div>
+			<div class="modal-aside">
+				<div class="header-img">
+					<div class="header-img-profile-pic">
+						<img id="profile_pic_mini">
+					</div>
+					<div class="header-text">
+						<a href="#"><span id="username_pic"></span></a>
+						<span class="middot">&middot;</span>
+						<a class="button">Follow</a> <!--ovde je <a> umesto <button> jer sa button nece da mi bolduje na 500 he he...-->
+					</div>
+				</div>
+				<div id="comments">
+					
+				</div>
+				<div class="like-comm-save">
+					<div class="like-comm">
+						<a href="#"><div class="like"></div></a>
+						<a href="#"><div class="comment"></div></a>
+					</div>
+					<a href="#"><div class="save"></div></a>
+				</div>
+				<div class="likes-number">
+					<a href="#"><span id="likes_number"></span>
+					 likes</a>
+				</div>
+				<div class="date">
+					<a href="#">Datum/vreme postavljanja</a>
+				</div>
+				<div class="add-comm">
+					<form>
+						<textarea placeholder="Add a comment..."></textarea>
+					</form>
+					<a href="#"><span>&middot;&middot;&middot;</span></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</article>
+<script type="text/javascript" src="profil.js"></script>
+</body>
+</html>
