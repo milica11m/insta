@@ -21,7 +21,7 @@ profil = {
 			src: "https://instagram.fbeg3-1.fna.fbcdn.net/t51.2885-15/s640x640/sh0.08/e35/15101672_384769135197225_1815682323278987264_n.jpg",
 			heartNumber: 88,
 			commentNumber: 5
-		},
+		}, 
 		{
 			src: "https://instagram.fbeg3-1.fna.fbcdn.net/t51.2885-15/s750x750/sh0.08/e35/15876555_1629964887311239_3823340686732689408_n.jpg",
 			heartNumber: 56,
@@ -79,8 +79,6 @@ for (var i = profil.images.length - 1; i >= 0; i--) {
 
 	var hyperlink = document.createElement("a");
 	hyperlink.classList.add("img-link");
-	// hyperlink.href = "pic.html";
-	// hyperlink.target = "my_iframe";
 	hyperlink.appendChild(img);
 	hyperlink.src = profil.images[i].src;
 	hyperlink.likes = profil.images[i].heartNumber;
@@ -119,6 +117,23 @@ for (var i = profil.images.length - 1; i >= 0; i--) {
 	k++;
 }
 
+var modal = document.getElementById("modal");
 document.getElementById("close").onclick = function() {
-	document.getElementById("modal").style.display = "none";
+	modal.style.display = "none";
+}
+
+var newComment = document.getElementById("newComment");
+newComment.onkeyup = function(e) {
+	if (e.which === 13) {
+		var p = document.createElement("p");
+		p.innerHTML = newComment.value;
+		document.getElementById("comments").appendChild(p);
+		newComment.value = "";
+	}
+}
+
+window.onclick = function(e){
+	if (e.target == modal) {
+		modal.style.display = "none"
+	}
 }
